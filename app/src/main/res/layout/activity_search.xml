@@ -1,0 +1,45 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/results_toolbar_id">
+    </android.support.v7.widget.Toolbar>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/results_rv_id"
+            android:layout_below="@id/results_toolbar_id"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_clear_black_24dp"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:id="@+id/not_found_id"
+        android:layout_centerHorizontal="true">
+    </View>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/not_found_text"
+        android:textColor="#c0c5ce"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:visibility="gone"
+        android:layout_below="@id/not_found_id"
+        android:text="Shayad Khabar faili hi nahi!"
+        android:layout_centerHorizontal="true"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/progressbar_id" />
+</RelativeLayout>
