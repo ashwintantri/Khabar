@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.example.ashwin.khabar.Helpers.HelperFunctions;
 import com.example.ashwin.khabar.Models.NewsItem;
 
+import java.net.URLEncoder;
 import java.util.ArrayList;
 
 public class SearchActivity extends AppCompatActivity
@@ -36,7 +37,7 @@ public class SearchActivity extends AppCompatActivity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent intent = getIntent();
         query = intent.getStringExtra("query");
-        final String JSON_URL = "https://newsapi.org/v2/everything?q="+query+"&apiKey=ae072e92b280480c99dc61a7d1f1c9b0";
+        final String JSON_URL = "https://newsapi.org/v2/everything?q="+ URLEncoder.encode(query)+"&apiKey=ae072e92b280480c99dc61a7d1f1c9b0";
         HelperFunctions.loadDataActivity(textView,view,progressBar,JSON_URL,newsItems,recyclerView,getApplicationContext());
     }
     @Override

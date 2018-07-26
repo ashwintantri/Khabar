@@ -48,7 +48,7 @@ public class Headlines extends Fragment
             @Override
             public void onRefresh()
             {
-                HelperFunctions.loadData(rootView,JSON_URL,newsItems,recyclerView,getActivity().getApplicationContext());
+                HelperFunctions.loadData(rootView,JSON_URL,newsItems,recyclerView,getContext());
                 refreshLayout.setRefreshing(false);
             }
         });

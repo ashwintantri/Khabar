@@ -76,7 +76,7 @@ public class HelperFunctions
                     @Override
                     public void onResponse(String response)
                     {
-                        progressBar.setVisibility(INVISIBLE);
+                        progressBar.setVisibility(rootView.INVISIBLE);
 
                         try
                         {

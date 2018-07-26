@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar_id);
         setSupportActionBar(toolbar);
 
-
         final ViewPager viewPager = findViewById(R.id.pager);
         final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         editText = findViewById(R.id.search_text_id);

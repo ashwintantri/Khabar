@@ -61,8 +61,9 @@ public class WebActivity extends AppCompatActivity
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
                 intent.putExtra(Intent.EXTRA_TEXT,url);
-                intent.setFlag(Intent.FLAG_ACTIVITY_NEW_TASK);
-                getApplicationContext().startActivity(Intent.createChooser(intent,"Share"));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                this.startActivity(Intent.createChooser(intent,"Share"));
                 return true;
         }
         return super.onOptionsItemSelected(item);
