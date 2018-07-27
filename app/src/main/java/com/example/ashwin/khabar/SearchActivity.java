@@ -37,7 +37,7 @@ public class SearchActivity extends AppCompatActivity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent intent = getIntent();
         query = intent.getStringExtra("query");
-        final String JSON_URL = "https://newsapi.org/v2/everything?q="+ URLEncoder.encode(query)+"&apiKey=key";
+        final String JSON_URL = "https://newsapi.org/v2/everything?q="+ URLEncoder.encode(query)+"&apiKey=ae072e92b280480c99dc61a7d1f1c9b0";
         HelperFunctions.loadDataActivity(textView,view,progressBar,JSON_URL,newsItems,recyclerView,getApplicationContext());
     }
     @Override

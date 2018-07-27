@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.NavUtils;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
@@ -64,7 +65,7 @@ public class SavedItemAdapter extends RecyclerView.Adapter<SavedItemAdapter.News
                 public void onClick(View v)
                 {
                     NewsItem.findById(NewsItem.class,newsItem.getId()).delete();
-                    Toast.makeText(context,"Deleted",Toast.LENGTH_SHORT).show();
+                    Snackbar.make(v,"Deleted",Snackbar.LENGTH_SHORT).show();
                     NavUtils.navigateUpFromSameTask((Activity)context);
                 }
             });
