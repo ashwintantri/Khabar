@@ -33,11 +33,12 @@ public class SavedNewsActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved_news);
 
-
+        //setting up toolbar
         Toolbar toolbar = findViewById(R.id.saved_news_toolbar_id);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        
+        //recycler view stuff
         recyclerView = findViewById(R.id.saved_news_rv_id);
         newsItemList = new ArrayList<>(NewsItem.listAll(NewsItem.class));
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false));
