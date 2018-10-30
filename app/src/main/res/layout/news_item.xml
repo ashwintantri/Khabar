@@ -24,6 +24,8 @@
         android:textSize="20sp"
         android:text="Headlines"
         android:textColor="#000"
+       android:text="hellosimsr"
+        android:textColor="@android:color/holo_blue_dark"
         android:padding="10dp"
         android:layout_below="@+id/image_id"
         android:textStyle="bold"/>
