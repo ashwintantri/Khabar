@@ -40,6 +40,11 @@ public class SearchActivity extends AppCompatActivity
         final String JSON_URL = "https://newsapi.org/v2/everything?q="+ URLEncoder.encode(query)+"&apiKey=ae072e92b280480c99dc61a7d1f1c9b0";
         HelperFunctions.loadDataActivity(textView,view,progressBar,JSON_URL,newsItems,recyclerView,getApplicationContext());
     }
+    
+    /**
+        To add the actions to the menu items, we need to override the below method
+        It takes a MenuItem object which is clicked, and using its itemId, we can switch to different actions
+    */
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
